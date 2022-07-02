@@ -1,0 +1,21 @@
+<p>party-list works!</p>
+
+<ng-container *ngFor="let party of partyList$ | async">
+
+
+<!-- Path: src\app\parties\list\party-list\party-list.component.ts -->
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h4>${{ party.name }}</h4>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Desc</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" >View</button>
+  </mat-card-actions>
+</mat-card>
+
+</ng-container>
