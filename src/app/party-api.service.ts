@@ -34,6 +34,7 @@ export class PartyApiService {
   // PartyTypes
 
   getPartyTypesList(): Observable<PartyType[]> {
+    console.log('get Types')
     return this.http.get<PartyType[]>(this.partyAPIUrl + '/partyTypes');
   }
 

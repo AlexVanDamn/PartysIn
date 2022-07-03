@@ -1,20 +1,23 @@
 <p>party-list works!</p>
 
-<ng-container *ngFor="let party of partyList$ | async">
+<ng-container *ngFor="let party of partyList$ | async as Party">
 
 
 <!-- Path: src\app\parties\list\party-list\party-list.component.ts -->
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      <h4>${{ party.name }}</h4>
+      <h2 class="title">{{ party.name }}</h2>
     </mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <p>Desc</p>
+    <p>partyTypeId: {{ party.partyTypeId }}</p>
+    <p>partyType: {{ partyTypesMap.get(party.partyTypeId) }}</p>
+    <p>Status: {{ party.status }}</p>
+    <p>comments: {{ party.comments }}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary" >View</button>
+    <button mat-raised-button color="primary">View</button>
   </mat-card-actions>
 </mat-card>
 

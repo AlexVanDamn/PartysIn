@@ -2,12 +2,14 @@ export interface Party {
   id: number;
   name: string;
   status: Status;
+  partyTypeId: number;
   partyType: PartyType;
+  comments: string;
 }
 
 export interface PartyType {
   id: number;
-  name: string;
+  partyName: string;
 }
 
 export interface Status {
