@@ -1,0 +1,18 @@
+<span class="pi-cmp__label">Guests</span>
+
+<div class="flex">
+  <div class="flex__l">
+    <span class="party-guests__counter">{{ guestCounter }}</span>
+  </div>
+  <div class="flex__r">
+
+  <div class="avatar" *ngFor="let guest of guests as User">
+    <ng-container *ngIf="guest.picture; else noPicture">
+      <img [src]="guest.picture" alt="">
+    </ng-container>
+    <ng-template #noPicture>
+      <mat-icon>person</mat-icon>
+    </ng-template>
+  </div>
+</div>
+</div>

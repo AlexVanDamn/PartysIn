@@ -7,6 +7,7 @@
 @import '~@angular/material/theming';
 
 @import './app/party/party-title/party-title.component';
+@import './app/party/party-guests/party-guests.component';
 
 
 @include mat.core();
@@ -43,6 +44,7 @@ $pi-typography-config: mat.define-typography-config(
 
 
 @include party-title($pi-theme);
+@include party-guests($pi-theme);
 
 
 
@@ -53,10 +55,12 @@ html, body { height: 100%; }
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-
+$default-thickness: 16px;
 
 .pi-cmp__label {
   font-size: 14px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.54);
+  display: block;
+  margin: 0 0 $default-thickness*.5 0;
 }
