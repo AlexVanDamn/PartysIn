@@ -11,11 +11,15 @@ import { PartyApiService } from './party-api.service';
 
 import { PartyListModule } from './parties/list/party-list/party-list.module';
 import { PartyTitleComponent } from './party/party-title/party-title.component';
+import { PartyDateComponent } from './party/party-date/party-date.component';
+import { PartyAddressComponent } from './party/party-address/party-address.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PartyTitleComponent,
+    PartyDateComponent,
+    PartyAddressComponent,
   ],
   imports: [
     BrowserModule,

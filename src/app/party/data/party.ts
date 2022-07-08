@@ -17,3 +17,13 @@ export interface Status {
   id: number;
   statusOption: string;
 }
+
+export interface PartyAddress {
+  id: number;
+  address1 : string;
+  address2 : string;
+  city : string;
+  district : string;
+  postalCode : string;
+  country : string;
+}

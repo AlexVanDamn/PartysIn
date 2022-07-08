@@ -1,0 +1,18 @@
+
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@import '~@angular/material/theming';
+
+
+
+@mixin party-title($theme) {
+  $primary-palette: map.get($theme, primary);
+  $primary-color: mat-color($primary-palette, 300);
+
+  .pi-party-title {
+    h1 {
+      color: $primary-color!important;
+    }
+  }
+}

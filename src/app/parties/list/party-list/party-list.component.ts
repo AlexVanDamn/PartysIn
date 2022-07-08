@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { map, take, Observable } from 'rxjs';
 import { PartyApiService } from 'src/app/party-api.service';
-import { Party, PartyType, Status } from '../../data/party';
 
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { Party, PartyType } from 'src/app/party/data/party';
 
 @Component({
   selector: 'pi-party-list',
