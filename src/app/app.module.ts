@@ -34,7 +34,7 @@ import { PartyAddressComponent } from './party/party-address/party-address.compo
   providers: [PartyApiService],
   bootstrap: [AppComponent],
   exports: [
-    PartyTitleComponent
+    PartyTitleComponent,
   ]
 })
 export class AppModule { }

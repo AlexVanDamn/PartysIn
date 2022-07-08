@@ -8,6 +8,7 @@
 
 @import './app/party/party-title/party-title.component';
 @import './app/party/party-guests/party-guests.component';
+@import './app/party/party-created-by/party-created-by.component';
 
 
 @include mat.core();
@@ -33,7 +34,8 @@ $pi-typography-config: mat.define-typography-config(
   $headline:      mat.define-typography-level(48px, 52px, 600),
   $title:         mat.define-typography-level(32px, 36px, 600),
   $subheading-2:  mat.define-typography-level(28px, 32px, 600),
-  $body-1:        mat.define-typography-level(16px, 18px, 300),
+  $body-1:        mat.define-typography-level(14px, 18px, 300),
+  $body-2:        mat.define-typography-level(14px, 18px, 600),
   $caption:        mat.define-typography-level(14px, 18px, 300)
 );
 
@@ -42,11 +44,9 @@ $pi-typography-config: mat.define-typography-config(
 
 
 
-
 @include party-title($pi-theme);
 @include party-guests($pi-theme);
-
-
+@include party-created-by($pi-theme);
 
 
 

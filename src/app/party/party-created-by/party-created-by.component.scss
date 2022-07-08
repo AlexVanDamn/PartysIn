@@ -1,0 +1,41 @@
+
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@import '~@angular/material/theming';
+
+
+
+@mixin party-created-by($theme) {
+  $primary-palette: map.get($theme, primary);
+  $primary-color: mat-color($primary-palette, 300);
+
+  .pi-party-created-by {
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      .flex__l {
+        flex: 0 0 auto;
+      }
+      .flex__r {
+        flex: 0 0 auto;
+        text-align: right;
+        display: flex;
+      }
+    }
+
+    .avatar {
+      width: 46px;
+      height: 42px;
+      border-radius: 4px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+  }
+}

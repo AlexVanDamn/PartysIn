@@ -1,0 +1,27 @@
+<span class="pi-cmp__label">Created by</span>
+
+<div class="flex">
+  <div class="flex__l">
+    <ng-container *ngIf="user as User; else noUser">
+      <span class="pi-party-created-by__name mat-body-2"> {{ user.firstName }} {{ user.lastName }} </span>
+      <pi-follow-btn>
+
+      </pi-follow-btn>
+       </ng-container>
+     <ng-template #noUser>
+       No Creator
+     </ng-template>
+  </div>
+  <div class="flex__r">
+    <div class="avatar">
+      <ng-container *ngIf="user && user.picture; else noPicture">
+        <img [src]="user.picture" alt="">
+      </ng-container>
+      <ng-template #noPicture>
+        x
+        <!-- <mat-icon>person</mat-icon> -->
+      </ng-template>
+    </div>
+  </div>
+</div>
+
