@@ -8,11 +8,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PartyApiService } from './party-api.service';
+
 import { PartyListModule } from './parties/list/party-list/party-list.module';
+import { PartyTitleComponent } from './party/party-title/party-title.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PartyTitleComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,8 @@ import { PartyListModule } from './parties/list/party-list/party-list.module';
   bootstrap: [AppComponent],
   exports: [
 
+  
+    PartyTitleComponent
   ]
 })
 export class AppModule { }
