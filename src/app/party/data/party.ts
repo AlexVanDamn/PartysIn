@@ -6,6 +6,9 @@ export interface Party {
   partyType: PartyType;
   comments: string;
   dateBegin: Date;
+  addressId: number;
+  address: PartyAddress;
+  addressName: string;
 }
 
 export interface PartyType {

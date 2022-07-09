@@ -1,0 +1,23 @@
+<pi-party-title [title]="party.name"></pi-party-title>
+
+<div class="flex-container">
+  <div class="w-1/3">
+    <pi-party-date
+        [date]="party.dateBegin">
+    </pi-party-date>
+  </div>
+  <div class="w-1/3">
+   <pi-party-address
+        [address]="party.address">
+    </pi-party-address>
+  </div>
+  <div class="w-1/3">
+   <pi-party-guests
+        [guestCounter]="99"
+        [guests]="guests">
+    </pi-party-guests>
+   <pi-party-join-btn></pi-party-join-btn>
+  </div>
+</div>
+
+<pi-party-banner></pi-party-banner>

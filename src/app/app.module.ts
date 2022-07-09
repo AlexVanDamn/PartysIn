@@ -10,18 +10,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PartyApiService } from './party-api.service';
 
 import { PartyListModule } from './parties/list/party-list/party-list.module';
-import { PartyTitleComponent } from './party/party-title/party-title.component';
-import { PartyDateComponent } from './party/party-date/party-date.component';
-import { PartyAddressComponent } from './party/party-address/party-address.component';
-import { PartyBannerComponent } from './party/party-banner/party-banner.component';
+import { PartyPageModule } from './party/party-page/party-page.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PartyTitleComponent,
-    PartyDateComponent,
-    PartyAddressComponent,
-    PartyBannerComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,13 +24,12 @@ import { PartyBannerComponent } from './party/party-banner/party-banner.componen
     FormsModule,
     ReactiveFormsModule,
 
-    PartyListModule
+    PartyListModule,
+    PartyPageModule
   ],
   providers: [PartyApiService],
   bootstrap: [AppComponent],
   exports: [
-    PartyTitleComponent,
-    PartyBannerComponent,
   ]
 })
 export class AppModule { }

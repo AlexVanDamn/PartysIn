@@ -1,7 +1,7 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'pi',
+  selector: 'pi-party-title',
   template: `
   <h1 class="mat-h1">
     <ng-container *ngIf="title.length; else placeholder">

@@ -230,6 +230,77 @@
             "properties": [],
             "indexSignatures": [],
             "methods": []
+        },
+        {
+            "name": "User",
+            "id": "interface-User-45f54e5e3eb2b6e28e7a54ad1659c3e9432660ba67725c3243df6ca235f55613458cca0c6c7de271a9fb0f8a7ed5859aa26c09f14cb12f5ceef66e8e03b7b425-1",
+            "file": "src/app/party/data/user.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface User {\r\n  id: number;\r\n  firstName: string;\r\n  lastName: string;\r\n  username: string;\r\n  email?: string;\r\n  picture?: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "email",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "firstName",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "lastName",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "picture",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "username",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "User-1"
         }
     ],
     "injectables": [
@@ -613,6 +684,38 @@
                 ]
             },
             "type": "injectable"
+        },
+        {
+            "name": "PartyFacade",
+            "id": "injectable-PartyFacade-9062616c6b02593d881f38a227ef90fc35b0342c2151937cd9aa6623ea0432efe7e5ed2077ee9ac7301a205a8277281b27b27f837ba75e0f3fafaa79eb297cbe",
+            "file": "src/app/party/party.facade.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "getTitle",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 8,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from \"@angular/core\";\r\n\r\n@Injectable()\r\nexport class PartyFacade {\r\n\r\n  constructor() {}\r\n\r\n  getTitle(): string{\r\n    return 'Party Title from Facade';\r\n  }\r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 4
+            },
+            "type": "injectable"
         }
     ],
     "guards": [],
@@ -794,6 +897,68 @@
                     }
                 }
             }
+        },
+        {
+            "name": "FollowBtnComponent",
+            "id": "component-FollowBtnComponent-bec7ee9afae5d0025427936a066b80609819a00ee003d3f014a02f61ed13a3c043006c92ff8667ffb050e1be492e276f63019c6d84c1e731be6c04c9fe64a592",
+            "file": "src/app/shared/ui/follow-btn/follow-btn.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "pi-follow-btn",
+            "styleUrls": [
+                "./follow-btn.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./follow-btn.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'pi-follow-btn',\n  templateUrl: './follow-btn.component.html',\n  styleUrls: ['./follow-btn.component.scss']\n})\nexport class FollowBtnComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ":host {\n  display: block;\n\n  mat-icon {\n    margin-right: 4px;\n    font-size: 16px;\n    height: 16px;\n    width: 16px;\n    line-height: 16px;\n  }\n\n  button {\n    padding: 2px 8px;\n    font-size: 13px;\n    line-height: 22px;\n  }\n\n  .follower {\n\n    .follower__counter {\n      margin-right: 4px;\n      margin-left: 8px;\n    }\n  }\n}\n",
+                    "styleUrl": "./follow-btn.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<button mat-flat-button color=\"primary\">\n  <mat-icon>person_add</mat-icon>\n  <span>Follow</span>\n</button>\n\n<span class=\"follower\">\n  <span class=\"follower__counter mat-body-2\">2.700</span>\n  <span class=\"follower__label mat-body-1\">Follower</span>\n</span>\n"
         },
         {
             "name": "HeaderComponent",
@@ -1037,6 +1202,199 @@
             }
         },
         {
+            "name": "PartyBannerComponent",
+            "id": "component-PartyBannerComponent-0f7c72a8a7d4589379afd35a368de5e648c00af92298c9922553c21f6b81e3812a754332c2b0dcc446f2bceb9bf655705e01c596137a15f5616f92c80e38880b",
+            "file": "src/app/party/party-banner/party-banner.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "pi-party-banner",
+            "styleUrls": [
+                "./party-banner.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./party-banner.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "class",
+                    "defaultValue": "'pi-party-banner'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9,
+                    "decorators": [
+                        {
+                            "name": "HostBinding",
+                            "stringifiedArguments": "'class'"
+                        }
+                    ],
+                    "modifierKind": [
+                        144
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "class",
+                    "defaultValue": "'pi-party-banner'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "\"pi-party-banner\"",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, HostBinding, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'pi-party-banner',\n  templateUrl: './party-banner.component.html',\n  styleUrls: ['./party-banner.component.scss']\n})\nexport class PartyBannerComponent implements OnInit {\n  @HostBinding('class') readonly class = 'pi-party-banner';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ":host {\n  display: block;\n\n  border-radius: 10px;\n\n  overflow: hidden;\n\n  img {\n    width: 100%;\n    height: 100%;\n  }\n}\n",
+                    "styleUrl": "./party-banner.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 9
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<img src=\"/assets/banner/banner_01.png\" alt=\"\" />\n"
+        },
+        {
+            "name": "PartyCreatedByComponent",
+            "id": "component-PartyCreatedByComponent-b0a2afc5ebee3284700264ef435a2dd670e6fafcebe3e3cd5ecc77d8938574412315e23c69d94eb6d1370c0b5f29e36280c32b5add5636735972ddedcd34fc5b",
+            "file": "src/app/party/party-created-by/party-created-by.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "pi-party-created-by",
+            "styleUrls": [
+                "./party-created-by.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./party-created-by.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "User",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "class",
+                    "defaultValue": "'pi-party-created-by'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "decorators": [
+                        {
+                            "name": "HostBinding",
+                            "stringifiedArguments": "'class'"
+                        }
+                    ],
+                    "modifierKind": [
+                        144
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "class",
+                    "defaultValue": "'pi-party-created-by'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "\"pi-party-created-by\"",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, HostBinding, Input, OnInit } from '@angular/core';\nimport { User } from '../data/user';\n\n@Component({\n  selector: 'pi-party-created-by',\n  templateUrl: './party-created-by.component.html',\n  styleUrls: ['./party-created-by.component.scss']\n})\nexport class PartyCreatedByComponent implements OnInit {\n  @HostBinding('class') readonly class = 'pi-party-created-by';\n\n  constructor() { }\n\n  @Input() user!: User;\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\n@use 'sass:map';\n@use '@angular/material' as mat;\n\n@import '~@angular/material/theming';\n\n\n\n@mixin party-created-by($theme) {\n  $primary-palette: map.get($theme, primary);\n  $primary-color: mat-color($primary-palette, 300);\n\n  .pi-party-created-by {\n\n    .flex {\n      display: flex;\n      justify-content: space-between;\n      .flex__l {\n        flex: 0 0 auto;\n      }\n      .flex__r {\n        flex: 0 0 auto;\n        text-align: right;\n        display: flex;\n      }\n    }\n\n    .avatar {\n      width: 46px;\n      height: 42px;\n      border-radius: 4px;\n      overflow: hidden;\n\n      img {\n        width: 100%;\n        height: auto;\n      }\n    }\n\n  }\n}\n",
+                    "styleUrl": "./party-created-by.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 10
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<span class=\"pi-cmp__label\">Created by</span>\n\n<div class=\"flex\">\n  <div class=\"flex__l\">\n    <ng-container *ngIf=\"user as User; else noUser\">\n      <span class=\"pi-party-created-by__name mat-body-2\"> {{ user.firstName }} {{ user.lastName }} </span>\n      <pi-follow-btn>\n\n      </pi-follow-btn>\n       </ng-container>\n     <ng-template #noUser>\n       No Creator\n     </ng-template>\n  </div>\n  <div class=\"flex__r\">\n    <div class=\"avatar\">\n      <ng-container *ngIf=\"user && user.picture; else noPicture\">\n        <img [src]=\"user.picture\" alt=\"\">\n      </ng-container>\n      <ng-template #noPicture>\n        x\n        <!-- <mat-icon>person</mat-icon> -->\n      </ng-template>\n    </div>\n  </div>\n</div>\n\n"
+        },
+        {
             "name": "PartyDateComponent",
             "id": "component-PartyDateComponent-b3d3840e976dbe17a9e72ce068f07fe1a2e15d8f46d11216087f84d0d570c0e72f713887244445a1f0e19817e9efd50c656a03ee966d7e23606d503e077ba936",
             "file": "src/app/party/party-date/party-date.component.ts",
@@ -1170,7 +1528,7 @@
         },
         {
             "name": "PartyGuestsComponent",
-            "id": "component-PartyGuestsComponent-90022488c7b68bdeb6c65e7a188a2e03c5398fe8eb1ccc681464e939a07ddddebb686b2839340f91271ad1c757b72a028a0a6ff184c51cd78c1f75494149bc70",
+            "id": "component-PartyGuestsComponent-aa74f47c40a13bee6a223e5372a07e054aa87a424bd1ddfce71d194f61bd9e23bcb69d143516caeac2325144afafa7b654002daa3f9a5e002ec032ca1caa06c7",
             "file": "src/app/party/party-guests/party-guests.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1186,7 +1544,26 @@
                 "./party-guests.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "guestCounter",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "guests",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "Array<User>",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [
                 {
@@ -1197,7 +1574,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 9,
+                    "line": 12,
                     "decorators": [
                         {
                             "name": "HostBinding",
@@ -1216,7 +1593,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 13,
+                    "line": 19,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1229,7 +1606,7 @@
                     "defaultValue": "'pi-party-guests'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 9,
+                    "line": 12,
                     "type": "\"pi-party-guests\"",
                     "decorators": []
                 }
@@ -1238,11 +1615,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, HostBinding, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'pi-party-guests',\n  templateUrl: './party-guests.component.html',\n  styleUrls: ['./party-guests.component.scss']\n})\nexport class PartyGuestsComponent implements OnInit {\n  @HostBinding('class') readonly class = 'pi-party-guests';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, HostBinding, Input, OnInit } from '@angular/core';\nimport { User } from '../data/user';\n\n\n@Component({\n  selector: 'pi-party-guests',\n  templateUrl: './party-guests.component.html',\n  styleUrls: ['./party-guests.component.scss']\n})\n\nexport class PartyGuestsComponent implements OnInit {\n  @HostBinding('class') readonly class = 'pi-party-guests';\n\n  @Input() guestCounter: number = 0;\n  @Input() guests: Array<User> = []\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "\n@use 'sass:map';\n@use '@angular/material' as mat;\n\n@import '~@angular/material/theming';\n\n:host {\n  display: block;\n}\n\n@mixin party-guests($theme) {\n  $primary-palette: map.get($theme, primary);\n  $primary-color: mat-color($primary-palette, 600);\n  $primary-bg-color: mat-color($primary-palette, 100);\n\n  .pi-party-guests {\n\n\n    .party-guests__counter {\n      background-color: $primary-bg-color;\n\n      font-size: 20px;\n      font-weight: 600;\n      color: $primary-color;\n      line-height: 20px;\n\n      border-radius: 4px;\n      padding: 2px 4px;\n    }\n  }\n}\n",
+                    "data": "\n@use 'sass:map';\n@use '@angular/material' as mat;\n\n@import '~@angular/material/theming';\n\n:host {\n  display: block;\n}\n\n@mixin party-guests($theme) {\n  $primary-palette: map.get($theme, primary);\n  $primary-color: mat-color($primary-palette, 600);\n  $primary-bg-color: mat-color($primary-palette, 100);\n\n\n  .flex {\n    display: flex;\n    justify-content: space-between;\n    .flex__l {\n      flex: 0 0 auto;\n    }\n    .flex__r {\n      flex: 0 0 auto;\n      text-align: right;\n      display: flex;\n    }\n  }\n\n  .pi-party-guests {\n\n    .party-guests__counter {\n      background-color: $primary-bg-color;\n\n      font-size: 20px;\n      font-weight: 600;\n      color: $primary-color;\n      line-height: 20px;\n\n      border-radius: 4px;\n      padding: 2px 8px;\n    }\n\n    .avatar {\n      background-color: #ccc;\n      border-radius: 100%;\n      height: 36px;\n      width: 36px;\n      display: block;\n      box-sizing: border-box;\n      text-align: center;\n\n      img {\n        width: 100%;\n        display: block;\n        height: auto;\n        border-radius: 100%;\n      }\n\n      mat-icon {\n        height: 36px;\n        line-height: 36px;\n      }\n    }\n  }\n}\n",
                     "styleUrl": "./party-guests.component.scss"
                 }
             ],
@@ -1253,12 +1630,74 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 9
+                "line": 15
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<span class=\"pi-cmp__label\">Guests</span>\n\n<div class=\"flex\">\n<div class=\"flex__l\">\n  <span class=\"party-guests__counter\">270</span>\n</div>\n<div class=\"flex__r\">\n  <div class=\"avatar\">\n    <mat-icon>home</mat-icon>\n  </div>\n</div>\n</div>\n"
+            "templateData": "<span class=\"pi-cmp__label\">Guests</span>\n\n<div class=\"flex\">\n  <div class=\"flex__l\">\n    <span class=\"party-guests__counter\">{{ guestCounter }}</span>\n  </div>\n  <div class=\"flex__r\">\n\n  <div class=\"avatar\" *ngFor=\"let guest of guests as User\">\n    <ng-container *ngIf=\"guest.picture; else noPicture\">\n      <img [src]=\"guest.picture\" alt=\"\">\n    </ng-container>\n    <ng-template #noPicture>\n      <mat-icon>person</mat-icon>\n    </ng-template>\n  </div>\n</div>\n</div>\n"
+        },
+        {
+            "name": "PartyJoinBtnComponent",
+            "id": "component-PartyJoinBtnComponent-3b48ae1540c66ece2625fbd3a0c43ed3b8ff0ed2495653948ab8d8d5dbcb057f25816825431f74fbaed3c2e7760e6045a54d95814ef9db7c4f27cd0b1852259f",
+            "file": "src/app/party/party-join-btn/party-join-btn.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-party-join-btn",
+            "styleUrls": [
+                "./party-join-btn.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./party-join-btn.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-party-join-btn',\n  templateUrl: './party-join-btn.component.html',\n  styleUrls: ['./party-join-btn.component.scss']\n})\nexport class PartyJoinBtnComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ":host {\n  display: block;\n\n  button {\n    width: 100%;\n  }\n}\n",
+                    "styleUrl": "./party-join-btn.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<button mat-flat-button color=\"primary\">\n  <mat-icon>person_add</mat-icon>\n  <span>Join Party</span>\n</button>\n"
         },
         {
             "name": "PartyListComponent",
@@ -1407,15 +1846,77 @@
             "templateData": "<p>party-list works!</p>\n\n<ng-container *ngFor=\"let party of partyList$ | async as Party\">\n\n\n<!-- Path: src\\app\\parties\\list\\party-list\\party-list.component.ts -->\n<mat-card>\n  <mat-card-header>\n    <mat-card-title>\n      <h2 class=\"title\">{{ party.name }}</h2>\n    </mat-card-title>\n  </mat-card-header>\n  <mat-card-content>\n    <p>partyTypeId: {{ party.partyTypeId }}</p>\n    <p>partyType: {{ partyTypesMap.get(party.partyTypeId) }}</p>\n    <p>Status: {{ party.status }}</p>\n    <p>comments: {{ party.comments }}</p>\n    <p>date: {{ party.dateBegin }}</p>\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-raised-button color=\"primary\">View</button>\n  </mat-card-actions>\n</mat-card>\n\n</ng-container>\n"
         },
         {
+            "name": "PartyPageComponent",
+            "id": "component-PartyPageComponent-04caac11d2507e2097f1ff3a0ef7169e6c9cc3de41ffed2d123a60b90e14ad914b8ac5ae8e18247d4121fd1d8c41062e85f84f664f9340a79750845e6f4abf70",
+            "file": "src/app/party/party-page/party-page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-party-page",
+            "styleUrls": [
+                "./party-page.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./party-page.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-party-page',\n  templateUrl: './party-page.component.html',\n  styleUrls: ['./party-page.component.scss']\n})\nexport class PartyPageComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ":host {\n  display: block;\n}\n",
+                    "styleUrl": "./party-page.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>party-page works!</p>\n\n<pi-party-title title=\"My Title\"></pi-party-title>\n"
+        },
+        {
             "name": "PartyTitleComponent",
-            "id": "component-PartyTitleComponent-f43d0b87547d3c59f9a539eb155aab92c9205d8f617f9eb0e6672f995afc84057a03c11b821b63974498fe198131fdba5bc4ec6d9c8b85ceee7bf6a154897c26",
+            "id": "component-PartyTitleComponent-9b765e3a805c9872e1efadbf6ac76445ff5ea2d39e1e370b5840eb4f064504f6c10b2ef40b7960f08ef2ef414c10f670bc984e1f3015541e20fa44be7dab0f3c",
             "file": "src/app/party/party-title/party-title.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "pi",
+            "selector": "pi-party-title",
             "styleUrls": [
                 "./party-title.component.scss"
             ],
@@ -1480,7 +1981,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, HostBinding, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'pi',\n  template: `\n  <h1 class=\"mat-h1\">\n    <ng-container *ngIf=\"title.length; else placeholder\">\n      {{ title }}\n    </ng-container>\n    <ng-template #placeholder>\n      <span class=\"placeholder\">{{ placeholderText }}</span>\n    </ng-template>\n  </h1>\n  `,\n  styleUrls: ['./party-title.component.scss']\n})\nexport class PartyTitleComponent {\n  @HostBinding('class.pi-party-title') hostClass = true;\n\n  placeholderText = 'Party Title';\n  @Input() title: string;\n\n  constructor() {\n    this.title = '';\n  }\n}\n",
+            "sourceCode": "import { Component, HostBinding, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'pi-party-title',\n  template: `\n  <h1 class=\"mat-h1\">\n    <ng-container *ngIf=\"title.length; else placeholder\">\n      {{ title }}\n    </ng-container>\n    <ng-template #placeholder>\n      <span class=\"placeholder\">{{ placeholderText }}</span>\n    </ng-template>\n  </h1>\n  `,\n  styleUrls: ['./party-title.component.scss']\n})\nexport class PartyTitleComponent {\n  @HostBinding('class.pi-party-title') hostClass = true;\n\n  placeholderText = 'Party Title';\n  @Input() title: string;\n\n  constructor() {\n    this.title = '';\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1502,13 +2003,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-f5e5f79176523874ed8f190ead5e97624bbc7b10d8a6fac47aa489563cc98571ddaff6c65b7c431a27db49c4f099ee3db97f0ab9499a89b6447d8b23271b0f1f",
+            "id": "module-AppModule-c5bbbfa517037fd908c13fde5334ed355664bb787c1dbd88f680d0e61a7e4d403a9bd7f338e8a7d8363135e88093b12bbfd8ec6e7db5195dea528cab3554c680",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { HttpClientModule } from '@angular/common/http';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\nimport { PartyApiService } from './party-api.service';\n\nimport { PartyListModule } from './parties/list/party-list/party-list.module';\nimport { PartyTitleComponent } from './party/party-title/party-title.component';\nimport { PartyDateComponent } from './party/party-date/party-date.component';\nimport { PartyAddressComponent } from './party/party-address/party-address.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    PartyTitleComponent,\n    PartyDateComponent,\n    PartyAddressComponent,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule,\n    HttpClientModule,\n    FormsModule,\n    ReactiveFormsModule,\n\n    PartyListModule\n  ],\n  providers: [PartyApiService],\n  bootstrap: [AppComponent],\n  exports: [\n    PartyTitleComponent\n  ]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { HttpClientModule } from '@angular/common/http';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\nimport { PartyApiService } from './party-api.service';\n\nimport { PartyListModule } from './parties/list/party-list/party-list.module';\nimport { PartyPageModule } from './party/party-page/party-page.module';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule,\n    HttpClientModule,\n    FormsModule,\n    ReactiveFormsModule,\n\n    PartyListModule,\n    PartyPageModule\n  ],\n  providers: [PartyApiService],\n  bootstrap: [AppComponent],\n  exports: [\n  ]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -1523,15 +2024,6 @@
                     "elements": [
                         {
                             "name": "AppComponent"
-                        },
-                        {
-                            "name": "PartyAddressComponent"
-                        },
-                        {
-                            "name": "PartyDateComponent"
-                        },
-                        {
-                            "name": "PartyTitleComponent"
                         }
                     ]
                 },
@@ -1543,16 +2035,15 @@
                         },
                         {
                             "name": "PartyListModule"
+                        },
+                        {
+                            "name": "PartyPageModule"
                         }
                     ]
                 },
                 {
                     "type": "exports",
-                    "elements": [
-                        {
-                            "name": "PartyTitleComponent"
-                        }
-                    ]
+                    "elements": []
                 },
                 {
                     "type": "bootstrap",
@@ -1570,13 +2061,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-78922b3ae99d2c5249b333980bd5afde1b120b2cc6fedfd41b8b2cc90f279797cb4b22e183bf7e1d1dfab8c6100e77e7812c110234d81f866f544f28a3e18b15",
+            "id": "module-AppRoutingModule-f12585f3468a2f4d18c2acaddcb309269c59cd1a98c9c99679ddfcf5e722b8fbefabb2a02740b5432946b896255333c12fa78a69dd2e4e8b9221ed843cb0b232",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { PartyPageComponent } from './party/party-page/party-page.component';\n\nconst routes: Routes = [\n  { path: 'party/:id', component: PartyPageComponent },\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule {\n  constructor() { }\n\n}\n",
             "children": [
                 {
                     "type": "providers",
@@ -1593,6 +2084,98 @@
                 {
                     "type": "exports",
                     "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "FollowBtnModule",
+            "id": "module-FollowBtnModule-2d3132fde9681baf25309472e10c00b6adfe686acf48d97037f4140bea0a5697d6636f72640acee2c2248a8e04aca8c5a8b18b1ed33bda8e44ff84646ac61df2",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/shared/ui/follow-btn/follow-btn.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { FollowBtnComponent } from './follow-btn.component';\r\nimport { MatButtonModule } from '@angular/material/button';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    FollowBtnComponent,\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n    MatButtonModule,\r\n    MatIconModule,\r\n  ],\r\n  exports: [\r\n    FollowBtnComponent\r\n  ]\r\n})\r\nexport class FollowBtnModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "FollowBtnComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "FollowBtnComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "PartyCreatedByModule",
+            "id": "module-PartyCreatedByModule-38cd10b4324a86b51c66a176a934eee951d551f5d36bf03951a565f129b9ead5205f4bcf40b158f998529c9dd4867486b8ac5f2b874f8c69ac9b206bd0335b0e",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/party/party-created-by/party-created-by.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { PartyCreatedByComponent } from './party-created-by.component';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { FollowBtnModule } from 'src/app/shared/ui/follow-btn/follow-btn.module';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    PartyCreatedByComponent,\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n    MatIconModule,\r\n    MatButtonModule,\r\n\r\n    FollowBtnModule\r\n  ],\r\n  exports: [\r\n    PartyCreatedByComponent\r\n  ]\r\n})\r\n\r\n\r\nexport class PartyCreatedByModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "PartyCreatedByComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "FollowBtnModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "PartyCreatedByComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "bootstrap",
@@ -1649,6 +2232,50 @@
             ]
         },
         {
+            "name": "PartyJoinBtnModule",
+            "id": "module-PartyJoinBtnModule-480b2136e0fc713388f43edb1b0c5cf1339ba3138d1eb609bbf49e479a8b6e8e9da1dd9d84ea93cb53bc4680abb17d0cda736be092ef1bfea294f5b563caac4e",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/party/party-join-btn/party-join-btn-module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\nimport { PartyJoinBtnComponent } from './party-join-btn.component';\r\nimport { MatButtonModule } from '@angular/material/button';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    PartyJoinBtnComponent,\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n\r\n    MatButtonModule,\r\n    MatIconModule\r\n  ],\r\n  exports: [\r\n    PartyJoinBtnComponent\r\n  ]\r\n})\r\nexport class PartyJoinBtnModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "PartyJoinBtnComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "PartyJoinBtnComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
             "name": "PartyListModule",
             "id": "module-PartyListModule-08c163422a8a031240cc116e09d080b3e04e680337c9846019e9c6e5e80ce58944bfbc9c3d7d4104431b9f190ace0011f826933f569906432adfa4db7cf56499",
             "description": "",
@@ -1691,6 +2318,98 @@
                     "elements": []
                 }
             ]
+        },
+        {
+            "name": "PartyPageModule",
+            "id": "module-PartyPageModule-357d912a178a6013c17235ac424e7b2d4985e5d31a4afc53143719d8c3af248f75716f5b2569e8b30ff4f181aae8dbac55c2da2dfd3f01eeead5219f2fbfd4e6",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/party/party-page/party-page.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n\r\nimport { PartyPageComponent } from './party-page.component';\r\nimport { PartyTitleModule } from '../party-title/party-title.module';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    PartyPageComponent,\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n    PartyTitleModule\r\n  ],\r\n  exports: [\r\n    PartyPageComponent\r\n  ]\r\n})\r\n\r\nexport class PartyPageModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "PartyPageComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "PartyTitleModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "PartyPageComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "PartyTitleModule",
+            "id": "module-PartyTitleModule-bb76706ddce471111db7551c74d155945816f6df2334066ff1d0f83ffb445b59032d81001417d974c81bc2d7d8d48190fee72517ca5b21dbc32ff6c757d5de31",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/party/party-title/party-title.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\nimport { PartyTitleComponent } from '../party-title/party-title.component';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    PartyTitleComponent,\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n  ],\r\n  exports: [\r\n    PartyTitleComponent,\r\n  ]\r\n})\r\nexport class PartyTitleModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "PartyTitleComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "PartyTitleComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
         }
     ],
     "miscellaneous": {
@@ -1719,7 +2438,57 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/party/party-banner/party-banner.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-created-by/party-created-by.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/party/party-date/party-date.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-guests/party-guests.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-join-btn/party-join-btn.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-page/party-page.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1739,7 +2508,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/party/party-guests/party-guests.component.stories.ts",
+                "file": "src/app/shared/ui/follow-btn/follow-btn.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1829,7 +2598,57 @@
                 "name": "Placeholder",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/party/party-banner/party-banner.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Placeholder",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-created-by/party-created-by.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Placeholder",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/party/party-date/party-date.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Placeholder",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-guests/party-guests.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Placeholder",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-join-btn/party-join-btn.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Placeholder",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-page/party-page.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1849,7 +2668,7 @@
                 "name": "Placeholder",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/party/party-guests/party-guests.component.stories.ts",
+                "file": "src/app/shared/ui/follow-btn/follow-btn.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1938,11 +2757,61 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/party/party-banner/party-banner.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<PartyBannerComponent>",
+                "defaultValue": "(args: PartyBannerComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-created-by/party-created-by.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<PartyCreatedByComponent>",
+                "defaultValue": "(args: PartyCreatedByComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/party/party-date/party-date.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<PartyDateComponent>",
                 "defaultValue": "(args: PartyDateComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-guests/party-guests.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<PartyGuestsComponent>",
+                "defaultValue": "(args: PartyGuestsComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-join-btn/party-join-btn.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<PartyJoinBtnComponent>",
+                "defaultValue": "(args: PartyJoinBtnComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-page/party-page.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<PartyPageComponent>",
+                "defaultValue": "(args: PartyPageComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -1958,11 +2827,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/party/party-guests/party-guests.component.stories.ts",
+                "file": "src/app/shared/ui/follow-btn/follow-btn.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<PartyGuestsComponent>",
-                "defaultValue": "(args: PartyGuestsComponent) => ({\r\n  props: args,\r\n})"
+                "type": "Story<FollowBtnComponent>",
+                "defaultValue": "(args: FollowBtnComponent) => ({\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
@@ -2022,6 +2891,70 @@
                     "defaultValue": "(args: PartyAddressComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
+            "src/app/party/party-banner/party-banner.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-banner/party-banner.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Placeholder",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-banner/party-banner.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-banner/party-banner.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<PartyBannerComponent>",
+                    "defaultValue": "(args: PartyBannerComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/party/party-created-by/party-created-by.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-created-by/party-created-by.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Placeholder",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-created-by/party-created-by.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-created-by/party-created-by.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<PartyCreatedByComponent>",
+                    "defaultValue": "(args: PartyCreatedByComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
             "src/app/party/party-date/party-date.component.stories.ts": [
                 {
                     "name": "Default",
@@ -2052,6 +2985,102 @@
                     "deprecationMessage": "",
                     "type": "Story<PartyDateComponent>",
                     "defaultValue": "(args: PartyDateComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/party/party-guests/party-guests.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-guests/party-guests.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Placeholder",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-guests/party-guests.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-guests/party-guests.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<PartyGuestsComponent>",
+                    "defaultValue": "(args: PartyGuestsComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/party/party-join-btn/party-join-btn.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-join-btn/party-join-btn.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Placeholder",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-join-btn/party-join-btn.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-join-btn/party-join-btn.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<PartyJoinBtnComponent>",
+                    "defaultValue": "(args: PartyJoinBtnComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/party/party-page/party-page.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-page/party-page.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Placeholder",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-page/party-page.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-page/party-page.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<PartyPageComponent>",
+                    "defaultValue": "(args: PartyPageComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/app/party/party-title/party-title.component.stories.ts": [
@@ -2086,12 +3115,12 @@
                     "defaultValue": "(args: PartyTitleComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
-            "src/app/party/party-guests/party-guests.component.stories.ts": [
+            "src/app/shared/ui/follow-btn/follow-btn.component.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/party/party-guests/party-guests.component.stories.ts",
+                    "file": "src/app/shared/ui/follow-btn/follow-btn.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -2101,7 +3130,7 @@
                     "name": "Placeholder",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/party/party-guests/party-guests.component.stories.ts",
+                    "file": "src/app/shared/ui/follow-btn/follow-btn.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -2111,11 +3140,11 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/party/party-guests/party-guests.component.stories.ts",
+                    "file": "src/app/shared/ui/follow-btn/follow-btn.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<PartyGuestsComponent>",
-                    "defaultValue": "(args: PartyGuestsComponent) => ({\r\n  props: args,\r\n})"
+                    "type": "Story<FollowBtnComponent>",
+                    "defaultValue": "(args: FollowBtnComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -2272,7 +3301,12 @@
                 "name": "routes",
                 "filename": "src/app/app-routing.module.ts",
                 "module": "AppRoutingModule",
-                "children": [],
+                "children": [
+                    {
+                        "path": "party/:id",
+                        "component": "PartyPageComponent"
+                    }
+                ],
                 "kind": "module"
             }
         ]
@@ -2345,6 +3379,15 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/party/data/user.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/party/party-address/party-address.component.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2381,6 +3424,84 @@
                 "name": "PartyAddressComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-banner/party-banner.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-banner/party-banner.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Placeholder",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-banner/party-banner.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-banner/party-banner.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PartyBannerComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-created-by/party-created-by.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-created-by/party-created-by.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Placeholder",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-created-by/party-created-by.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-created-by/party-created-by.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PartyCreatedByComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
@@ -2458,7 +3579,85 @@
                 "linktype": "component",
                 "name": "PartyGuestsComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-join-btn/party-join-btn.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-join-btn/party-join-btn.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Placeholder",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-join-btn/party-join-btn.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-join-btn/party-join-btn.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PartyJoinBtnComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-page/party-page.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-page/party-page.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Placeholder",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-page/party-page.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-page/party-page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PartyPageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -2498,6 +3697,54 @@
                 "name": "PartyTitleComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party.facade.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "PartyFacade",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/ui/follow-btn/follow-btn.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/ui/follow-btn/follow-btn.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Placeholder",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/ui/follow-btn/follow-btn.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/ui/follow-btn/follow-btn.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FollowBtnComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
