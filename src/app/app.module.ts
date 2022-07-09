@@ -13,6 +13,7 @@ import { PartyListModule } from './parties/list/party-list/party-list.module';
 import { PartyTitleComponent } from './party/party-title/party-title.component';
 import { PartyDateComponent } from './party/party-date/party-date.component';
 import { PartyAddressComponent } from './party/party-address/party-address.component';
+import { PartyBannerComponent } from './party/party-banner/party-banner.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { PartyAddressComponent } from './party/party-address/party-address.compo
     PartyTitleComponent,
     PartyDateComponent,
     PartyAddressComponent,
+    PartyBannerComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,7 @@ import { PartyAddressComponent } from './party/party-address/party-address.compo
   bootstrap: [AppComponent],
   exports: [
     PartyTitleComponent,
+    PartyBannerComponent,
   ]
 })
 export class AppModule { }
