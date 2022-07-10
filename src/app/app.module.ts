@@ -7,9 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { PartyApiService } from './party-api.service';
+import { PartyApiService } from './party/party-api.service';
 
-import { PartyListModule } from './parties/list/party-list/party-list.module';
 import { PartyPageModule } from './party/party-page/party-page.module';
 
 @NgModule({
@@ -24,7 +23,6 @@ import { PartyPageModule } from './party/party-page/party-page.module';
     FormsModule,
     ReactiveFormsModule,
 
-    PartyListModule,
     PartyPageModule
   ],
   providers: [PartyApiService],

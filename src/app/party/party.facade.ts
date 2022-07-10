@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { PartyApiService } from "../party-api.service";
+import { PartyApiService } from "./party-api.service";
 import { Party } from "./data/party";
 import { User } from "./data/user";
 
@@ -18,17 +18,6 @@ export class PartyFacade {
       { id: 3, firstname: 'Jack', lastname: 'Doe', username: 'jack', createdAt: new Date() },
       { id: 4, firstname: 'Jill', lastname: 'Doe', username: 'jill', createdAt: new Date() },
     ]
-  }
-
-  getCreator(): User {
-    return {
-      id: 1,
-      firstname: 'John',
-      lastname: 'Doe',
-      username: 'jdoe',
-      picture: '/assets/userpics/avatar_01.jpg',
-      createdAt: new Date()
-    }
   }
 
   getParty(id:number): Observable<Party> {

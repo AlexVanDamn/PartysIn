@@ -13,7 +13,7 @@
   $primary-color: mat-color($primary-palette, 300);
 
   .pi-party-address {
-    margin-bottom: $default-thickness;
+    margin-bottom: $default-thickness*2;
     padding-right: $default-thickness*2;
 
     .mat-h2{

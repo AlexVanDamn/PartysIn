@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Party, Status } from './party/data/party';
+import { Party, Status } from './data/party';
 
 
 @Injectable({
