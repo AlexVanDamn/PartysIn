@@ -1,1 +1,9 @@
-<img src="/assets/banner/banner_01.png" alt="" />
+
+
+<ng-container *ngIf="banner; else noBanner">
+  <img [src]="banner" alt="" />
+</ng-container>
+
+<ng-template #noBanner>
+  NO BANNER
+</ng-template>

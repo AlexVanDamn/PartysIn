@@ -5,6 +5,7 @@ export interface Party {
   name: string;
 
   status: Status;
+  banner: string;
 
   description: string;
 

@@ -31,7 +31,7 @@ export class PartyFacade {
     }
   }
 
-  getParty(): Observable<Party> {
-    return this.service.getParty(1);
+  getParty(id:number): Observable<Party> {
+    return this.service.getParty(id);
   }
 }

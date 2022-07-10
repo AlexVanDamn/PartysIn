@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'pi-party-banner',
@@ -8,7 +8,10 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 export class PartyBannerComponent implements OnInit {
   @HostBinding('class') readonly class = 'pi-party-banner';
 
+  @Input() banner? : string;
+
   constructor() { }
+
 
   ngOnInit(): void {
   }
