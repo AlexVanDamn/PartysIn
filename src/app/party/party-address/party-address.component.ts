@@ -6,7 +6,7 @@ import { PartyAddress } from '../data/party';
   template: `
    <span class="pi-cmp__label">Where</span>
     <h3 class="mat-h3">
-      {{ name }}
+      {{ address.name}}
     </h3>
     <span class="mat-caption">{{ formattedAddress }}</span>
   `,
@@ -14,11 +14,10 @@ import { PartyAddress } from '../data/party';
 })
 export class PartyAddressComponent implements OnInit {
 
-  @Input() name!: string;
   @Input() address!: PartyAddress;
 
   get formattedAddress(): string {
-    return this.address.address1 + ' ' + this.address.address2 + ', ' + this.address.city + ', ' + this.address.district + ', ' + this.address.postalCode + ', ' + this.address.country;
+    return this.address.street + ' ' + this.address.streetNo + ', ' + this.address.city + ', ' + this.address.district + ', ' + this.address.postalCode + ', ' + this.address.country;
   };
 
   constructor() { }

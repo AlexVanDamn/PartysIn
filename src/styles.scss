@@ -53,7 +53,12 @@ $pi-typography-config: mat.define-typography-config(
 html, body { height: 100%; }
 
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  background-color: #F5F5F8;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding-top: 200px;
+}
 
 $default-thickness: 16px;
 
@@ -64,3 +69,4 @@ $default-thickness: 16px;
   display: block;
   margin: 0 0 $default-thickness*.5 0;
 }
+

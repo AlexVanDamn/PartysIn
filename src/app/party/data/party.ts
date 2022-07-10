@@ -1,20 +1,22 @@
+import { User } from "./user";
+
 export interface Party {
   id: number;
   name: string;
+
   status: Status;
-  partyTypeId: number;
-  partyType: PartyType;
-  comments: string;
+
+  description: string;
+
   dateBegin: Date;
+  dateEnd: Date;
+
   addressId: number;
   address: PartyAddress;
-  addressName: string;
+
+  createdBy: User;
 }
 
-export interface PartyType {
-  id: number;
-  partyName: string;
-}
 
 export interface Status {
   id: number;
@@ -23,8 +25,9 @@ export interface Status {
 
 export interface PartyAddress {
   id: number;
-  address1 : string;
-  address2 : string;
+  name : string;
+  street : string;
+  streetNo : string;
   city : string;
   district : string;
   postalCode : string;

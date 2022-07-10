@@ -3,7 +3,7 @@ import { map, take, Observable } from 'rxjs';
 import { PartyApiService } from 'src/app/party-api.service';
 
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
-import { Party, PartyType } from 'src/app/party/data/party';
+import { Party } from 'src/app/party/data/party';
 
 @Component({
   selector: 'pi-party-list',
@@ -13,7 +13,7 @@ import { Party, PartyType } from 'src/app/party/data/party';
 export class PartyListComponent implements OnInit {
 
   partyList$!: Observable<Party[]>;
-  partyTypesList$!: Observable<PartyType[]>;
+  // partyTypesList$!: Observable<PartyType[]>;
   // partyTypeList: Array<PartyType> = [];
 
   // Map to display data accociated with foreign keys
@@ -26,18 +26,18 @@ export class PartyListComponent implements OnInit {
 
   ngOnInit(): void {
     this.partyList$ = this.service.getPartiesList();
-    this.partyTypesList$ = this.service.getPartyTypesList();
+    // this.partyTypesList$ = this.service.getPartyTypesList();
     this.refreshPartyTypesMap();
   }
 
   refreshPartyTypesMap(): void {
 
-    this.partyTypesList$.pipe(
-      take(1),
-      map((type:PartyType[]) => type.map( (t) => {
-        this.partyTypesMap.set(t.id, t.partyName)
-      }))
-    ).subscribe();
+    // this.partyTypesList$.pipe(
+    //   take(1),
+    //   map((type:[]) => type.map( (t) => {
+    //     this.partyTypesMap.set(t.id, t.partyName)
+    //   }))
+    // ).subscribe();
 
   }
 

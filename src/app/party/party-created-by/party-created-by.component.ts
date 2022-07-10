@@ -11,7 +11,7 @@ export class PartyCreatedByComponent implements OnInit {
 
   constructor() { }
 
-  @Input() user!: User;
+  @Input() user?: User;
 
   ngOnInit(): void {
   }

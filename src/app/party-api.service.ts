@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Party, PartyType, Status } from './party/data/party';
+import { Party, Status } from './party/data/party';
 
 
 @Injectable({
@@ -19,6 +19,10 @@ export class PartyApiService {
     return this.http.get<Party[]>(this.partyAPIUrl + '/parties');
   }
 
+  getParty(id:number|string): Observable<Party> {
+    return this.http.get<Party>(this.partyAPIUrl + `/parties/${id}`);
+  }
+
   addParty(data: Party): Observable<Party> {
     return this.http.post<Party>(this.partyAPIUrl + '/parties', data);
   }
@@ -31,24 +35,6 @@ export class PartyApiService {
     return this.http.delete<Party>(this.partyAPIUrl + `/parties/${id}`);
   }
 
-  // PartyTypes
-
-  getPartyTypesList(): Observable<PartyType[]> {
-    console.log('get Types')
-    return this.http.get<PartyType[]>(this.partyAPIUrl + '/partyTypes');
-  }
-
-  addPartyTypes(data: PartyType): Observable<PartyType> {
-    return this.http.post<PartyType>(this.partyAPIUrl + '/partyTypes', data);
-  }
-
-  updatePartyTypes(id:number|string, data:PartyType): Observable<PartyType> {
-    return this.http.put<PartyType>(this.partyAPIUrl + `/partyTypes/${id}`, data);
-  }
-
-  deletePartyTypes(id:number|string): Observable<PartyType> {
-    return this.http.delete<PartyType>(this.partyAPIUrl + `/partyTypes/${id}`);
-  }
 
   // Status
 
