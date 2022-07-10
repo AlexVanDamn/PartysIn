@@ -8,10 +8,21 @@
   display: block;
 }
 
-@mixin party-title($theme) {
+@mixin party-address($theme) {
   $primary-palette: map.get($theme, primary);
   $primary-color: mat-color($primary-palette, 300);
 
   .pi-party-address {
+    margin-bottom: $default-thickness;
+    padding-right: $default-thickness*2;
+
+    .mat-h2{
+      color: $pi-text-color-dark;
+      margin: 0 0 $default-thickness*.5 0;
+    }
+
+    .mat-body-1 {
+      color: $pi-text-color;
+    }
   }
 }

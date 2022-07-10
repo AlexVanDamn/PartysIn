@@ -1,25 +1,37 @@
 :host {
   display: block;
+}
 
-  mat-icon {
-    margin-right: 4px;
-    font-size: 16px;
-    height: 16px;
-    width: 16px;
-    line-height: 16px;
-  }
+@mixin follow-btn($theme) {
 
-  button {
-    padding: 2px 8px;
-    font-size: 13px;
-    line-height: 22px;
-  }
+  .pi-follow-btn {
 
-  .follower {
-
-    .follower__counter {
+    mat-icon {
       margin-right: 4px;
-      margin-left: 8px;
+      font-size: 16px;
+      height: 16px;
+      width: 16px;
+      line-height: 16px;
+    }
+
+    button {
+      padding: 2px 8px;
+      font-size: 13px;
+      line-height: 22px;
+    }
+
+    .follower {
+
+      .follower__counter {
+        margin-right: 4px;
+        margin-left: 8px;
+      }
+
+      .follower__label {
+        color: $pi-text-color-light;
+        font-weight: 400;
+      }
     }
   }
+
 }

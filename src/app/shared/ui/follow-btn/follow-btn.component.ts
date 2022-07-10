@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 
 @Component({
   selector: 'pi-follow-btn',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./follow-btn.component.scss']
 })
 export class FollowBtnComponent implements OnInit {
-
+ @HostBinding('class') readonly class = 'pi-follow-btn';
   constructor() { }
 
   ngOnInit(): void {

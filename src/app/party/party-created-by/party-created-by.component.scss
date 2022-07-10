@@ -12,6 +12,12 @@
 
   .pi-party-created-by {
 
+    .party-created-by__name{
+      margin: 0 0 4px 0;
+      display: block;
+      color: $pi-text-color-dark;
+    }
+
     .flex {
       display: flex;
       justify-content: space-between;

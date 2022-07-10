@@ -4,13 +4,31 @@
 
 @import '~@angular/material/theming';
 
-
+:host {
+  display: block;
+}
 
 @mixin party-date($theme) {
   $primary-palette: map.get($theme, primary);
   $primary-color: mat-color($primary-palette, 300);
 
   .pi-party-date {
+    margin-bottom: $default-thickness*2;
 
+    .mat-h2{
+      color: $pi-text-color-dark;
+      margin: 0 0 $default-thickness*.5 0;
+      text-transform: uppercase;
+    }
+
+    .mat-body-1 {
+      color: $pi-text-color;
+    }
+
+    small{
+      margin-left: $default-thickness*.5;
+      color: $pi-text-color-light;
+      font-size: 20px;
+    }
   }
 }
