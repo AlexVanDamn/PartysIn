@@ -1,0 +1,66 @@
+:host {
+  display: block;
+}
+
+
+@mixin party-teaser-list($theme) {
+
+  .pi-party-teaser-list {
+
+    .teaser{
+      display: flex;
+      margin-bottom: $default-thickness;
+
+      .teaser__preview {
+        flex: 0 0 240px;
+        min-width: 0;
+        margin: -16px 0 -16px -16px ;
+
+        img {
+          display: block;
+          height: 80px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .teaser__head {
+        flex: 1 0 auto;
+        padding-left: $default-thickness;
+        align-self: center;
+      }
+
+      .teaser__body {
+        flex: 0 1 auto;
+        padding-left: $default-thickness;
+        align-self: center;
+        color: $pi-text-color-light;
+
+        mat-icon {
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+          vertical-align: middle;
+        }
+      }
+
+      .teaser__date {
+        font-weight: 400;
+        color: $pi-text-color-light;
+      }
+
+      .teaser__city {
+        font-weight: 400;
+        color: $pi-text-color-light;
+      }
+
+      .teaser__title {
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}

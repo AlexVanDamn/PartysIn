@@ -21,8 +21,9 @@
       margin: 0 0 $default-thickness*.5 0;
     }
 
-    .mat-body-1 {
-      color: $pi-text-color;
+    .mat-body-2 {
+      color: $pi-text-color-light;
+      font-weight: normal;
     }
   }
 }

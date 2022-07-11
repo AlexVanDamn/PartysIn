@@ -8,7 +8,7 @@ import { PartyAddress } from '../data/party';
     <h2 class="mat-h2">
       {{ address.name}}
     </h2>
-    <span class="mat-body-1">{{ formattedAddress }}</span>
+    <span class="mat-body-2">{{ formattedAddress }}</span>
   `,
   styleUrls: ['./party-address.component.scss']
 })

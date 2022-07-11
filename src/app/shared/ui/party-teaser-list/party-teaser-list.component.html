@@ -1,0 +1,19 @@
+<p>party-teaser-list works!</p>
+
+<ng-container *ngFor="let party of parties as Party">
+    <mat-card matRipple class="teaser" [routerLink]="['/party', party.id]" >
+      <div class="teaser__preview">
+        <img [src]="party.banner" alt="">
+      </div>
+    <div class="teaser__head">
+      <span class="mat-body-2 teaser__date">10 April</span>
+      <h5 class="mat-h5 teaser__title">
+        {{ party.name }}
+      </h5>
+    </div>
+    <div class="teaser__body">
+      <mat-icon class="material-icons-outlined">place</mat-icon>
+      <span class="mat-body-2 teaser__city"> {{ party.address.city }}</span>
+    </div>
+  </mat-card>
+</ng-container>

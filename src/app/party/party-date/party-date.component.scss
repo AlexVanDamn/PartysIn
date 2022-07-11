@@ -21,14 +21,16 @@
       text-transform: uppercase;
     }
 
-    .mat-body-1 {
-      color: $pi-text-color;
+    .mat-body-2 {
+      color: $pi-text-color-light;
+      font-weight: normal;
     }
 
     small{
       margin-left: $default-thickness*.5;
       color: $pi-text-color-light;
       font-size: 20px;
+      line-height: 20px;
     }
   }
 }

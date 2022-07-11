@@ -10,11 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PartyApiService } from './party/party-api.service';
 
 import { PartyPageModule } from './party/party-page/party-page.module';
+import { PartyTeaserListModule } from './shared/ui/party-teaser-list/party-teaser-list.module';
+import { HomePageModule } from './home/home-page/home-page.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,7 +22,12 @@ import { PartyPageModule } from './party/party-page/party-page.module';
     FormsModule,
     ReactiveFormsModule,
 
-    PartyPageModule
+    PartyPageModule,
+    PartyTeaserListModule,
+    HomePageModule
+  ],
+  declarations: [
+    AppComponent,
   ],
   providers: [PartyApiService],
   bootstrap: [AppComponent],

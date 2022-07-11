@@ -7,7 +7,7 @@ import * as moment from 'moment';
       <span class="pi-cmp__label">{{ dateFormattedWeekday }}</span>
       <ng-container *ngIf="date; else noDate">
         <h2 class="mat-h2">{{dateFormatted}}<small>{{dateFormattedYear}}</small></h2>
-        <span class="mat-body-1">begin at {{ dateTimeFormatted }} o'clock</span>
+        <span class="mat-body-2">begin at {{ dateTimeFormatted }} o'clock</span>
       </ng-container>
 
       <ng-template #noDate>
