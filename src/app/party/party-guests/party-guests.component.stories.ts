@@ -23,12 +23,10 @@ const Template: Story<PartyGuestsComponent> = (args: PartyGuestsComponent) => ({
 export const Default = Template.bind({});
 Default.args = {
   guestCounter: 3,
-  guests: [
-    { id: 1, firstName: 'John', lastName: 'Doe', username: 'jdoe', picture: '/assets/userpics/avatar_01.jpg'},
-    { id: 2, firstName: 'Jane', lastName: 'Doe', username: 'jane', picture: '/assets/userpics/avatar_02.jpg'},
-    { id: 3, firstName: 'Jack', lastName: 'Doe', username: 'jack'},
-    { id: 4, firstName: 'Jill', lastName: 'Doe', username: 'jill'},
-  ]
+  // guests: [
+  //   { id: 1, firstName: 'John', lastName: 'Doe', username: 'jdoe', picture: '/assets/userpics/avatar_01.jpg'},
+  //   { id: 2, firstName: 'Jane', lastName: 'Doe', username: 'jane', picture: '/assets/userpics/avatar_02.jpg'},
+  // ]
 };
 
 export const Placeholder = Template.bind({});

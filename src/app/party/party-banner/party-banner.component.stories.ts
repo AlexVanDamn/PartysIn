@@ -12,6 +12,7 @@ const Template: Story<PartyBannerComponent> = (args: PartyBannerComponent) => ({
 
 export const Default = Template.bind({});
 Default.args = {
+  banner: '/assets/banner/banner_01.png',
 };
 
 export const Placeholder = Template.bind({});
