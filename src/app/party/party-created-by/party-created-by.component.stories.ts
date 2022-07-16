@@ -24,8 +24,8 @@ export const Default = Template.bind({});
 Default.args = {
   user : {
     id: 1,
-    firstName: 'John',
-    lastName: 'Doe',
+    firstname: 'John',
+    lastname: 'Doe',
     username: 'jdoe',
     picture: '/assets/userpics/avatar_01.jpg'
   }

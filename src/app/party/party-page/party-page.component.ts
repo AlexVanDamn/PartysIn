@@ -5,6 +5,9 @@ import { User } from '../data/user';
 import { PartyFacade } from '../party.facade';
 
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
+
+
 @Component({
   selector: 'pi-party-page',
   templateUrl: './party-page.component.html',
@@ -14,17 +17,16 @@ export class PartyPageComponent implements OnInit {
   @HostBinding('class') class = 'pi-party-page';
   constructor(
     private facade: PartyFacade,
-    private route: ActivatedRoute,
+    // private route: ActivatedRoute,
     ) { }
 
   party$? : Observable<Party>;
+  party? : Party;
+
   guests = this.facade.getGuests() as Array<User>;
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-       this.party$ = this.facade.getParty(params['id'])
-    });
-
+    console.log('onInit Test', this.party)
   }
 
 }

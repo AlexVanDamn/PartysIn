@@ -1,6 +1,8 @@
 <div class="container">
   <div class="page">
-    <ng-container *ngrxLet="party$ as party">
+    <!-- <ng-container *ngrxLet="party$ as party"> -->
+
+    <ng-container *ngIf="party">
 
       <div class="flex-container border-bottom-dashed">
         <div class="w-2/3">
@@ -31,6 +33,7 @@
       </div>
 
       <pi-party-banner [banner]="party.banner"></pi-party-banner>
-    </ng-container>
+
+   </ng-container>
   </div>
 </div>

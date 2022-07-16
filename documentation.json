@@ -237,19 +237,19 @@
         },
         {
             "name": "User",
-            "id": "interface-User-c8a5bb3fdaf4f7cb9f4b7fa268173d186e756ee798cb38216a6567de7f1190c849ade43c33b3cf94d96e22e936bb9c9b795fd41af3fae73aa4045ba6b2100a3c-1",
+            "id": "interface-User-24b0d14f74269c36dd027a4bdc3a8bba1b455253af96c8604b2d974d84a556067b7be191d3d7217d64629bd7cef0449e15cd36885dd5822c4335995cce77aacc-1",
             "file": "src/app/party/data/user.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface User {\r\n  id: number;\r\n  firstname: string;\r\n  lastname: string;\r\n  username: string;\r\n  email?: string;\r\n  picture?: string;\r\n  createdAt: Date;\r\n}\r\n",
+            "sourceCode": "export interface User {\r\n  id: number;\r\n  firstname: string;\r\n  lastname: string;\r\n  username: string;\r\n  email?: string;\r\n  picture?: string;\r\n  createdAt?: Date;\r\n}\r\n",
             "properties": [
                 {
                     "name": "createdAt",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Date",
-                    "optional": false,
+                    "optional": true,
                     "description": "",
                     "line": 8
                 },
@@ -1470,7 +1470,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "\n\n<ng-container *ngIf=\"banner; else noBanner\">\n  <img [src]=\"banner\" alt=\"\" />\n</ng-container>\n\n<ng-template #noBanner>\n  NO BANNER\n</ng-template>\n"
+            "templateData": "<ng-container *ngIf=\"banner; else noBanner\">\n  <img [src]=\"banner\" alt=\"\" />\n</ng-container>\n\n<ng-template #noBanner>\n  NO BANNER\n</ng-template>\n"
         },
         {
             "name": "PartyCreatedByComponent",
@@ -1916,7 +1916,7 @@
         },
         {
             "name": "PartyPageComponent",
-            "id": "component-PartyPageComponent-8abdaad7ea3156bf6e9af07d28b059666e47a432aa146a571ca1992c3df464d556a0849caa83df56132ca8ff89d7023e32d29ddce516bd71da0f520a05749a23",
+            "id": "component-PartyPageComponent-d750b84faa0ea99b80282ff7ad2c41b9c9c706a245cfa16147a6c5b4788e7e3c300cb14ce105aadc4890e6659c0efdfde8757fb5c4976086c4ca2614e6171574",
             "file": "src/app/party/party-page/party-page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1943,7 +1943,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 14,
+                    "line": 17,
                     "decorators": [
                         {
                             "name": "HostBinding",
@@ -1959,7 +1959,16 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 21
+                    "line": 26
+                },
+                {
+                    "name": "party",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Party",
+                    "optional": true,
+                    "description": "",
+                    "line": 24
                 },
                 {
                     "name": "party$",
@@ -1968,7 +1977,7 @@
                     "type": "Observable<Party>",
                     "optional": true,
                     "description": "",
-                    "line": 20
+                    "line": 23
                 }
             ],
             "methodsClass": [
@@ -1978,7 +1987,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 23,
+                    "line": 28,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1991,7 +2000,7 @@
                     "defaultValue": "'pi-party-page'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 17,
                     "type": "string",
                     "decorators": []
                 }
@@ -2000,7 +2009,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, HostBinding, OnInit } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { Party } from '../data/party';\nimport { User } from '../data/user';\nimport { PartyFacade } from '../party.facade';\n\nimport { Router, ActivatedRoute, ParamMap } from '@angular/router';\n@Component({\n  selector: 'pi-party-page',\n  templateUrl: './party-page.component.html',\n  styleUrls: ['./party-page.component.scss']\n})\nexport class PartyPageComponent implements OnInit {\n  @HostBinding('class') class = 'pi-party-page';\n  constructor(\n    private facade: PartyFacade,\n    private route: ActivatedRoute,\n    ) { }\n\n  party$? : Observable<Party>;\n  guests = this.facade.getGuests() as Array<User>;\n\n  ngOnInit(): void {\n    this.route.params.subscribe(params => {\n       this.party$ = this.facade.getParty(params['id'])\n    });\n\n  }\n\n}\n",
+            "sourceCode": "import { Component, HostBinding, OnInit } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { Party } from '../data/party';\nimport { User } from '../data/user';\nimport { PartyFacade } from '../party.facade';\n\nimport { Router, ActivatedRoute, ParamMap } from '@angular/router';\n\n\n\n@Component({\n  selector: 'pi-party-page',\n  templateUrl: './party-page.component.html',\n  styleUrls: ['./party-page.component.scss']\n})\nexport class PartyPageComponent implements OnInit {\n  @HostBinding('class') class = 'pi-party-page';\n  constructor(\n    private facade: PartyFacade,\n    // private route: ActivatedRoute,\n    ) { }\n\n  party$? : Observable<Party>;\n  party? : Party;\n\n  guests = this.facade.getGuests() as Array<User>;\n\n  ngOnInit(): void {\n    console.log('onInit Test', this.party)\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -2020,28 +2029,13 @@
                         "type": "PartyFacade",
                         "deprecated": false,
                         "deprecationMessage": ""
-                    },
-                    {
-                        "name": "route",
-                        "type": "ActivatedRoute",
-                        "deprecated": false,
-                        "deprecationMessage": ""
                     }
                 ],
-                "line": 14,
+                "line": 17,
                 "jsdoctags": [
                     {
                         "name": "facade",
                         "type": "PartyFacade",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    },
-                    {
-                        "name": "route",
-                        "type": "ActivatedRoute",
                         "deprecated": false,
                         "deprecationMessage": "",
                         "tagName": {
@@ -2053,7 +2047,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"container\">\n  <div class=\"page\">\n    <ng-container *ngrxLet=\"party$ as party\">\n\n      <div class=\"flex-container border-bottom-dashed\">\n        <div class=\"w-2/3\">\n          <pi-party-title [title]=\"party.name\"></pi-party-title>\n          <div class=\"party__meta\">\n            <mat-icon class=\"material-icons-outlined\">pin_drop</mat-icon>\n            <span class=\"party__meta-city mat-body-1\">{{ party.address.city }}</span>\n          </div>\n        </div>\n        <div class=\"w-1/3\">\n          <pi-party-created-by [user]=\"party.createdBy\"></pi-party-created-by>\n        </div>\n      </div>\n      <div class=\"flex-container\">\n        <div class=\"w-1/3\">\n          <pi-party-date [date]=\"party.dateBegin\">\n          </pi-party-date>\n        </div>\n        <div class=\"w-1/3\">\n          <pi-party-address [address]=\"party.address\">\n          </pi-party-address>\n        </div>\n        <div class=\"w-1/3\">\n          <pi-party-guests [guestCounter]=\"99\" [guests]=\"guests\">\n          </pi-party-guests>\n          <pi-party-join-btn></pi-party-join-btn>\n        </div>\n      </div>\n\n      <pi-party-banner [banner]=\"party.banner\"></pi-party-banner>\n    </ng-container>\n  </div>\n</div>\n"
+            "templateData": "<div class=\"container\">\n  <div class=\"page\">\n    <!-- <ng-container *ngrxLet=\"party$ as party\"> -->\n\n      <div class=\"flex-container border-bottom-dashed\">\n        <div class=\"w-2/3\">\n          <pi-party-title [title]=\"party.name\"></pi-party-title>\n          <div class=\"party__meta\">\n            <mat-icon class=\"material-icons-outlined\">pin_drop</mat-icon>\n            <span class=\"party__meta-city mat-body-1\">{{ party.address.city }}</span>\n          </div>\n        </div>\n        <div class=\"w-1/3\">\n          <pi-party-created-by [user]=\"party.createdBy\"></pi-party-created-by>\n        </div>\n      </div>\n      <div class=\"flex-container\">\n        <div class=\"w-1/3\">\n          <pi-party-date [date]=\"party.dateBegin\">\n          </pi-party-date>\n        </div>\n        <div class=\"w-1/3\">\n          <pi-party-address [address]=\"party.address\">\n          </pi-party-address>\n        </div>\n        <div class=\"w-1/3\">\n          <pi-party-guests [guestCounter]=\"99\" [guests]=\"guests\">\n          </pi-party-guests>\n          <pi-party-join-btn></pi-party-join-btn>\n        </div>\n      </div>\n\n      <pi-party-banner [banner]=\"party.banner\"></pi-party-banner>\n    <!-- </ng-container> -->\n  </div>\n</div>\n"
         },
         {
             "name": "PartyTeaserListComponent",
@@ -2739,6 +2733,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "beispielParty",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/party/party-page/party-page.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Party",
+                "defaultValue": "{\r\n  id: 1,\r\n  name: 'Party Name',\r\n  status: {\r\n    id: 1,\r\n    statusOption: \"DRAFT\"\r\n  },\r\n  description: 'A party for all the dogs',\r\n  banner: '/assets/banner/banner_01.png',\r\n  dateBegin: new Date(),\r\n  dateEnd: new Date(),\r\n  addressId: 1,\r\n  address: {\r\n    id: 1,\r\n    name: 'Party Address',\r\n    street: 'Street',\r\n    streetNo: '1',\r\n    city: 'City',\r\n    district: 'District',\r\n    postalCode: '12345',\r\n    country: 'Country',\r\n  },\r\n  createdBy: {\r\n    id: 1,\r\n    firstname: 'Alex',\r\n    lastname: 'Kowalski',\r\n    username: 'alexkowalski',\r\n    email: 'adasd@email.de'\r\n  }\r\n}"
+            },
+            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -2762,6 +2766,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/party/party-date/party-date.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/party/party-banner/party-banner.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2773,16 +2787,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/party/party-created-by/party-created-by.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/party/party-date/party-date.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2922,6 +2926,16 @@
                 "name": "Placeholder",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/party/party-date/party-date.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Placeholder",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/party/party-banner/party-banner.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2933,16 +2947,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/party/party-created-by/party-created-by.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Placeholder",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/party/party-date/party-date.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3081,6 +3085,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/party/party-date/party-date.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<PartyDateComponent>",
+                "defaultValue": "(args: PartyDateComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/party/party-banner/party-banner.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3096,16 +3110,6 @@
                 "deprecationMessage": "",
                 "type": "Story<PartyCreatedByComponent>",
                 "defaultValue": "(args: PartyCreatedByComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/party/party-date/party-date.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<PartyDateComponent>",
-                "defaultValue": "(args: PartyDateComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -3162,6 +3166,48 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "src/app/party/party-page/party-page.component.stories.ts": [
+                {
+                    "name": "beispielParty",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-page/party-page.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Party",
+                    "defaultValue": "{\r\n  id: 1,\r\n  name: 'Party Name',\r\n  status: {\r\n    id: 1,\r\n    statusOption: \"DRAFT\"\r\n  },\r\n  description: 'A party for all the dogs',\r\n  banner: '/assets/banner/banner_01.png',\r\n  dateBegin: new Date(),\r\n  dateEnd: new Date(),\r\n  addressId: 1,\r\n  address: {\r\n    id: 1,\r\n    name: 'Party Address',\r\n    street: 'Street',\r\n    streetNo: '1',\r\n    city: 'City',\r\n    district: 'District',\r\n    postalCode: '12345',\r\n    country: 'Country',\r\n  },\r\n  createdBy: {\r\n    id: 1,\r\n    firstname: 'Alex',\r\n    lastname: 'Kowalski',\r\n    username: 'alexkowalski',\r\n    email: 'adasd@email.de'\r\n  }\r\n}"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-page/party-page.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Placeholder",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-page/party-page.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-page/party-page.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<PartyPageComponent>",
+                    "defaultValue": "(args: PartyPageComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
             "src/test.ts": [
                 {
                     "name": "context",
@@ -3213,6 +3259,38 @@
                     "deprecationMessage": "",
                     "type": "Story<PartyAddressComponent>",
                     "defaultValue": "(args: PartyAddressComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/party/party-date/party-date.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-date/party-date.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Placeholder",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-date/party-date.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/party/party-date/party-date.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<PartyDateComponent>",
+                    "defaultValue": "(args: PartyDateComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/app/party/party-banner/party-banner.component.stories.ts": [
@@ -3279,38 +3357,6 @@
                     "defaultValue": "(args: PartyCreatedByComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
-            "src/app/party/party-date/party-date.component.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/party/party-date/party-date.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Placeholder",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/party/party-date/party-date.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/party/party-date/party-date.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<PartyDateComponent>",
-                    "defaultValue": "(args: PartyDateComponent) => ({\r\n  props: args,\r\n})"
-                }
-            ],
             "src/app/party/party-guests/party-guests.component.stories.ts": [
                 {
                     "name": "Default",
@@ -3373,38 +3419,6 @@
                     "deprecationMessage": "",
                     "type": "Story<PartyJoinBtnComponent>",
                     "defaultValue": "(args: PartyJoinBtnComponent) => ({\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/app/party/party-page/party-page.component.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/party/party-page/party-page.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Placeholder",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/party/party-page/party-page.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/party/party-page/party-page.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<PartyPageComponent>",
-                    "defaultValue": "(args: PartyPageComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/app/party/party-title/party-title.component.stories.ts": [
@@ -3954,6 +3968,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "beispielParty",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/party/party-page/party-page.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -3985,7 +4009,7 @@
                 "linktype": "component",
                 "name": "PartyPageComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/7",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {

@@ -1,0 +1,11 @@
+<h1 class="mat-h1">
+
+  <ng-container *ngIf="title.length; else placeholder">
+    {{ title }}
+  </ng-container>
+
+  <ng-template #placeholder>
+    <span class="placeholder">{{ placeholderText }}</span>
+  </ng-template>
+
+</h1>

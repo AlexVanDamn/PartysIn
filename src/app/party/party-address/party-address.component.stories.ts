@@ -13,11 +13,11 @@ const Template: Story<PartyAddressComponent> = (args: PartyAddressComponent) => 
 
 export const Default = Template.bind({});
 Default.args = {
-  name: 'Universal Dog',
   address: {
     id: 1,
-    address1: '123 Main St',
-    address2: '',
+    name: 'Universal Dog',
+    street: '123 Main St',
+    streetNo: '',
     city: 'Anytown',
     district: 'Castelo Branco',
     postalCode: '12345-678',

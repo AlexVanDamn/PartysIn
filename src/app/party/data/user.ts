@@ -5,5 +5,5 @@ export interface User {
   username: string;
   email?: string;
   picture?: string;
-  createdAt: Date;
+  createdAt?: Date;
 }
